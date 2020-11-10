@@ -1,6 +1,8 @@
 package SimpleSBApps.swahilicoast.dao;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import SimpleSBApps.swahilicoast.model.Commodity;
@@ -13,4 +15,10 @@ public interface CommodityDao {
     }
 
     List<Commodity> selectAllCommodities();
+
+    Optional<Commodity> selectCommodityById(UUID id);
+
+    int deleteCommodityById(UUID id);
+
+    int updateCommodityById(UUID id, BigDecimal price);
 }
