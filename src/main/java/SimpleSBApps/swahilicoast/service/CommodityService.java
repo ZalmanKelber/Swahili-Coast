@@ -17,7 +17,7 @@ public class CommodityService {
     private final CommodityDao commodityDao;
 
     @Autowired
-    public CommodityService(@Qualifier("fakeDao") CommodityDao commodityDao) {
+    public CommodityService(@Qualifier("postgres") CommodityDao commodityDao) {
         this.commodityDao = commodityDao;
     }
 

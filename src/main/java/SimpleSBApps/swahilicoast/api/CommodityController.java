@@ -44,6 +44,8 @@ public class CommodityController {
 
     @PatchMapping(path = "{id}")
     public void updateCommodityById(@PathVariable("id") UUID id, @NonNull @RequestBody String price) {
+        System.out.println(price);
+        System.out.println(id);
         commodityService.updatePriceById(id, new BigDecimal(price));
     }
 }
