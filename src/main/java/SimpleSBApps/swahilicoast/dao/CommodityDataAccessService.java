@@ -66,9 +66,6 @@ public class CommodityDataAccessService implements CommodityDao {
 
     @Override
     public int updateCommodityById(UUID id, BigDecimal price) {
-        System.out.println("invoking updateCommodityById");
-        System.out.println(id);
-        System.out.println(price);
         Optional<Commodity> commodity = selectCommodityById(id);
         if (commodity.isPresent()) {
             final String sql = "UPDATE commodity SET price = ? WHERE id = ?";
